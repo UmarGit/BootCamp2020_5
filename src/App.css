@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*{ margin: 0;
+ --prussian-blue: #003049ff;
+ --maximum-red: #d62828ff;
+ --orange: #f77f00ff;
+ --maximum-yellow-red: #fcbf49ff;
+ --lemon-meringue: #eae2b7ff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: inherit;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  background-color: var(--orange) !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cart{
+  background-color: var(--maximum-yellow-red) !important;
+  position: relative !important;
 }
-
-.App-link {
-  color: #61dafb;
+.home{
+	text-align: center;
+	height: calc( 100vh - 64px );
+	background-color: var(--maximum-red);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section1{
+	text-align: center;
+	height: calc( 100vh - 64px );
+	background-color: var(--prussian-blue);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    color: white;
+}
+.section1 > h2{
+	font-weight: bolder;
+}
+.section2{
+	text-align: center;
+	min-height: calc( 100vh );
+	background-color: var(--lemon-meringue);
+}
+.section2 > h2{
+	color: #003049ff !important;
+}
+.box {
+	align-self: flex-end;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	background-color: var(--orange);
+	height: auto;
+	margin: 0 auto 0 auto;
+	transform-origin: bottom;
+	width: 90%;
+	transition: all 0.4s ease-in-out;
+}
+.bounce-7 {
+	animation-name: bounce-7;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+	transition: all 0.4s ease-in-out;
+}
+@keyframes bounce-7 {
+	0%   { transform: scale(1,1)      rotate(50deg); }
+	16%  { transform: scale(1.1,.9)   rotate(100deg); }
+	32%  { transform: scale(.9,1.1)   rotate(150deg); }
+	48%  { transform: scale(1.05,.95) rotate(200deg); }
+	64%  { transform: scale(1,1)      rotate(250deg); }
+	80%  { transform: scale(1,1)      rotate(300deg); }
+	100% { transform: scale(1,1)      rotate(360deg); }
+}
+.box2 {
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+.bounce-8 {
+	animation-name: bounce-8;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-8 {
+	0%   { transform: scale(1,1)      translateY(0); }
+	10%  { transform: scale(1.1,.9)   translateY(0); }
+	30%  { transform: scale(.9,1.1)   translateY(-50px); }
+	50%  { transform: scale(1.05,.95) translateY(0); }
+	57%  { transform: scale(1,1)      translateY(-7px); }
+	64%  { transform: scale(1,1)      translateY(0); }
+	100% { transform: scale(1,1)      translateY(0); }
+}
+.box3 {
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	background-color: transparent;
+}
+.gallery{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 auto;
+}
+@media (max-width: 400px){
+	.section1 > h2{
+		font-size: 4rem;
+	}
 }

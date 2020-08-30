@@ -1,0 +1,126 @@
+.card h1 {
+  color: #ff6d39;
+  font-family: "muli";
+  font-weight: bold;
+}
+.card h3 {
+  color: #ffffff;
+  font-family: "muli";
+  margin-top: 84px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-family: "muli";
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 29px;
+}
+
+.card h4 {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "muli";
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.product-name{
+  padding: 20px;
+}
+.product-name button{
+  margin-top: 10px;
+}
+.product-price{
+  font-weight: bolder;
+  font-size: 3.6rem;
+  color: #ffffff;
+}
+/*main card*/
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #eae2b7ff;
+  margin: 3% auto;
+}
+
+.left {
+  content: "";
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #ff6d39;
+  margin-left: 93px;
+  border-radius: 20px 50% 50% 20px;
+  position: absolute;
+  z-index: 5;
+}
+
+.left img {
+  margin-left: -40px;
+  margin-top: 60px;
+  width: 200px;
+}
+
+.right {
+  content: "";
+  height: 200px;
+  width: 300px;
+  background-color: #2a2f40;
+  z-index: 3;
+  margin-left: 200px;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, 0.4);
+}
+
+.product-info {
+  position: absolute;
+  margin-left: 100px;
+  height: 200px;
+  width: 200px;
+  z-index: 10;
+}
+
+@media (max-width: 800px){
+  .card {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .left {
+    width: 80%;
+    padding: 20px;
+    position: initial;
+    border-radius: 20% 45% 0px 0px;
+    margin: 0;
+  }
+  .right {
+    content: "";
+    width: 80%;
+    z-index: 0;
+    padding: 20px;
+    margin: 0 0 100px 0;
+    border-radius: 0px 0px 20px 20px;
+  }
+  .product-info {
+    position: initial;
+    margin: 0;
+    width: 100%;
+  }
+  .left img {
+    margin-left: 0;
+    margin-top: 60px;
+    width: 300px;
+  }
+}
+@media (max-width: 400px){
+  .left img {
+    margin-left: 0;
+    margin-top: 60px;
+    width: 300px;
+  }
+}
