@@ -66,22 +66,18 @@ function ProductItem() {
   return (
     <div className={classes.root}>
 		<div className="card2">
-		   <div className="left2" >
+		   <div className="cardimg" >
 		      <img className="box2 bounce-8" src={product.image} alt="Shoe"/>
 		   </div>
-		   <div className="right2">
-		      <div className="product-info2">
-		         <div className="product-name2">
-		            <h1>{product.name}</h1>
-			         <div>
-			            <p className="product-price2">${product.price}</p>
-			         </div>
-					 <Fab variant="extended" onClick={handleClickOpen}>
-					     <ShoppingCartIcon className={classes.extendedIcon} />
-					     Add To Cart
-					 </Fab>
-		         </div>
-		      </div>
+		   <div className="cardtext">
+		    <h1>{product.name}</h1>
+			<div>
+			    <p className="cardprice">${product.price}</p>
+			</div>
+			<Fab variant="extended" onClick={handleClickOpen}>
+				<ShoppingCartIcon className={classes.extendedIcon} />
+				Add To Cart
+			</Fab>
 		   </div>
 		</div>
 	        { buy === 'false' ? 

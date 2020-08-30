@@ -6,7 +6,8 @@ function About() {
     <div>
       <div className="section1">
 	      <Typography variant="h1" component="h2" gutterBottom>
-	        	<div className="box bounce-8">About Shoey</div>
+	        	<div>About Shoey</div>
+	        	<div className="box bounce-8">Made by <a href="http://" target="_blank" rel="noopener noreferrer">UmarGit</a></div>
 	      </Typography>
 	  </div>
     </div>
